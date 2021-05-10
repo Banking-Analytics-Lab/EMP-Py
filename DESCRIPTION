@@ -1,1 +1,14 @@
-
+Package: EMP
+Type: Package
+Title: Expected Maximum Profit Classification Performance Measure
+Version: 0.1.0
+Date: 2021-05-10
+Authors@R: c(person("Cristian", "Bravo", role = c("aut", "cre"),
+                     email = "cbravoro@uwo.ca"),
+              person("Seppe", "vanden Broucke", role = "ctb",
+                     email = "seppe.vandenbroucke@kuleuven.be"),
+              person("Thomas", "Verbraken", role = c("aut")))
+Maintainer: Cristian Bravo <cbravoro@uwo.ca>, Alexander Hemming <ahemmin@uwo.ca>
+Depends: Python (>= 3.8.5), pandas, numpy, sklearn, scipy, sys, collections
+Description: Functions for estimating EMP (Expected Maximum Profit Measure) in Credit Risk Scoring and Customer Churn Prediction, according to Verbraken et al (2013, 2014) <DOI:10.1109/TKDE.2012.50>, <DOI:10.1016/j.ejor.2014.04.001>.
+License: GPL (>= 3)
