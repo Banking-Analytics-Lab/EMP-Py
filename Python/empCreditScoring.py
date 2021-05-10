@@ -19,9 +19,9 @@ def empCreditScoring(probability_scores, true_class_labels, p_0=0.55, p_1=0.1, R
   #   p_0: Percentage of cases on the first point mass of the LGD distribution (complete recovery).
   #   p_1: Percentage of cases on the second point mass of the LGD distribution (complete loss).
   #   ROI: Constant ROI per granted loan. A percentage.
-  #   print_output: Boolean variable that determines if output is printed. If True, output will be printed
-  #   return_output: Boolean variable that determines if output is returned. If True, output will be returned
-  #   rounding: An integer value that determines the precision of the output. The integer determines the decimal places retained in the output
+  #   print_output: Boolean variable that determines if output is printed. If True, output will be printed.
+  #   return_output: Boolean variable that determines if output is returned. If True, output will be returned.
+  #   rounding: An integer value that determines the precision of the output. The integer determines the decimal places retained in the output.
   #
   # Value:
   #   An EMP object with two components.
