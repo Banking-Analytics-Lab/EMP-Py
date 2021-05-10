@@ -1,0 +1,50 @@
+citHeader("To cite the Python package 'EMP' in publications, please use one of these entries:")
+
+year <- sub(".*(2[[:digit:]]{3})-.*", "\\1", meta$Date)
+vers <- paste("Python package version", meta$Version)
+
+citEntry(entry="Manual",
+         title = "EMP: Expected Maximum Profit Classification Performance Measure",
+         author = personList(as.person("Cristian Bravo"),
+                             as.person("Seppe vanden Broucke"),
+                             as.person("Thomas Verbraken")),
+         year = year,
+         note = vers,
+         textVersion =
+         paste("Bravo, C. and Vanden Broucke, S. and Verbraken, T. (",
+               year,
+               "). EMP: Expected Maximum Profit Classification Performance Measure. ",
+               vers, ". ", "Available Online: http://cran.r-project.org/web/packages/EMP/index.html",
+                sep=""))
+
+citEntry(entry="article",
+         title = "A Novel Profit Maximizing Metric for Measuring Classification Performance of Customer Churn Prediction Models",
+         author = personList(as.person("T. Verbraken"), as.person("W. Verbeke"), as.person("B. Baesens")),
+         journal   = "Knowledge and Data Engineering, IEEE Transactions on",
+         year = "2013",
+         volume = "25",
+         number = "5",
+         pages = "961-973",
+         url = "http://ieeexplore.ieee.org/iel5/69/6486492/06165289.pdf?arnumber=6165289",
+         textVersion = paste("Verbraken, T., Wouter, V. and Baesens, B. (2013)",
+           "A Novel Profit Maximizing Metric for Measuring Classification Performance of Customer Churn Prediction Models.",
+               "Knowledge and Data Engineering, IEEE Transactions on.", "25 (5): 961-973",
+                "http://ieeexplore.ieee.org/iel5/69/6486492/06165289.pdf?arnumber=6165289")
+)
+
+citEntry(entry="article",
+         title = "Development and application of consumer credit scoring 
+                  models using profit-based classification measures",
+         author = personList(as.person("T. Verbraken"), as.person("C. Bravo"),
+                  as.person("R. Weber"), as.person("B. Baesens")),
+         journal   = "European Journal of Operational Research",
+         year = "2014",
+         volume = "238",
+         number = "2",
+         pages = "505-513",
+         url = "http://www.sciencedirect.com/science/article/pii/S0377221714003105",
+         textVersion = paste("Verbraken, T., Bravo, C., Weber, R. and Baesens, B. (2014)",
+  	       "Development and application of consumer credit scoring models using profit-based classification measures.",
+               "European Journal of Operational Research.", "238 (2): 505-513",
+                "http://www.sciencedirect.com/science/article/pii/S0377221714003105")
+)
