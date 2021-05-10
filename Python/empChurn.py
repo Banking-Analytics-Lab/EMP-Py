@@ -16,8 +16,8 @@ def empChurn(probability_scores, true_class_labels, alpha=6, beta=14, clv=200, d
   # Arguments:
   #   probability_scores: A list, array, matrix or single pandas dataframe column of probability scores.
   #   true_class_labels: A list, array, matrix or single pandas dataframe column of true class labels.
-  #   alpha: Alpha parameter from beta and incomplete beta distributions
-  #   beta: Beta parameter from beta and incomplete beta distributions
+  #   alpha: Alpha parameter of unimodel beta distribution.
+  #   beta: Beta parameter of unimodel beta distribution.
   #   clv: Constant CLV per retained customer.
   #   d: Constant value of retention offer.
   #   f: Constant cost of retention offer.
