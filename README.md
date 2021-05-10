@@ -6,6 +6,8 @@ Functions for estimating EMP (Expected Maximum Profit Measure) in Credit Risk Sc
 
 To install run:
 
+```python
 pip install EMP
+```
 
 The functions have been coathored by Thomas Verbraken, Seppe van den Brucke and Cristián Bravo.
