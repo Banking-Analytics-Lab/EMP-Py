@@ -4,7 +4,7 @@ EMP Python Package repository, currently at version 3.8.5.
 
 Functions for estimating EMP (Expected Maximum Profit Measure) in Credit Risk Scoring and Customer Churn Prediction, according to Verbraken et al (2013, 2014).
 
-To install run:
+## Installation
 
 ```python
 pip install EMP
