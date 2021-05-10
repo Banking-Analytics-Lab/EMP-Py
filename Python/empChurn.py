@@ -21,13 +21,13 @@ def empChurn(probability_scores, true_class_labels, alpha=6, beta=14, clv=200, d
   #   clv: Constant CLV per retained customer.
   #   d: Constant value of retention offer.
   #   f: Constant cost of contact.
-  #   print_output: Boolean variable that determines if output is printed. If True, output will be printed
-  #   return_output: Boolean variable that determines if output is returned. If True, output will be returned
-  #   rounding: An integer value that determines the precision of the output. The integer determines the decimal places retained in the output
+  #   print_output: Boolean variable that determines if output is printed. If True, output will be printed.
+  #   return_output: Boolean variable that determines if output is returned. If True, output will be returned.
+  #   rounding: An integer value that determines the precision of the output. The integer determines the decimal places retained in the output.
   #
   # Value:
   #   An EMP object with four components.
-  #     MP: The Maximum Profit of the ROC curve at MP_fraction cutoff
+  #     MP: The Maximum Profit of the ROC curve at MP_fraction cutoff.
   #     MP_fraction: The percentage of cases that should be excluded, that is, 
   #     the percentual cutoff at MP profit.
   #     EMP: The Expected Maximum Profit of the ROC curve at EMP_fraction cutoff.}
