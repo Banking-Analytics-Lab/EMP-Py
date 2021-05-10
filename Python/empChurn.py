@@ -18,7 +18,7 @@ def empChurn(probability_scores, true_class_labels, alpha=6, beta=14, clv=200, d
   #   true_class_labels: A list, array, matrix or single pandas dataframe column of true class labels.
   #   alpha: Alpha parameter from beta and incomplete beta distributions
   #   beta: Beta parameter from beta and incomplete beta distributions
-  #   clv: Constant ROI per granted loan. A percentage.
+  #   clv: Constant CLV per retained customer.
   #   d: Constant value of retention offer.
   #   f: Constant cost of retention offer.
   #   print_output: Boolean variable that determines if output is printed. If True, output will be printed
