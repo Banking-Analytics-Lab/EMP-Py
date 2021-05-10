@@ -30,7 +30,7 @@ def empChurn(probability_scores, true_class_labels, alpha=6, beta=14, clv=200, d
   #     MP: The Maximum Profit of the ROC curve at MP_fraction cutoff.
   #     MP_fraction: The percentage of cases that should be excluded, that is, 
   #     the percentual cutoff at MP profit.
-  #     EMP: The Expected Maximum Profit of the ROC curve at EMP_fraction cutoff.}
+  #     EMP: The Expected Maximum Profit of the ROC curve at EMP_fraction cutoff.
   #     EMP_fraction: The percentage of cases that should be excluded, that is, 
   #     the percentual cutoff at EMP profit.
     
