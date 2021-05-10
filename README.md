@@ -8,4 +8,4 @@ To install run:
 
 pip install EMP
 
-The functions have been coathored by Thomas Verbraken, Seppe van den Brucke and Cristián Roman Bravo.
+The functions have been coathored by Thomas Verbraken, Seppe van den Brucke and Cristián Bravo.
