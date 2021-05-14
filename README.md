@@ -13,7 +13,7 @@ pip install EMP
 ## Usage
 
 ```python
-from EMP import empCreditScoring
+from EMP.metrics import empCreditScoring
 
 scores = [0.34, 0.44, 0.67, 0.83]
 classes = [0, 0, 1, 0]
