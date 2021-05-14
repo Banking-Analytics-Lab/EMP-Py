@@ -1,2 +1,2 @@
-from scrapeasy.Website import  Website
-from scrapeasy.Page import Page
+from EMP.empCreditScoring import  empCreditScoring
+from EMP.empChurn import empChurn
