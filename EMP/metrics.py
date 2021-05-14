@@ -98,6 +98,13 @@ class metrics:
     
     return n_0, n_1, pi_0, pi_1, F_0, F_1
 
+
+
+
+
+
+
+
     def empCreditScoring(probability_scores, true_class_labels, p_0=0.55, p_1=0.1, ROI=0.2644, print_output=True, return_output=True, rounding=None):
     
   # This software comes with absolutely no warranty. Use at your own risk.
@@ -165,7 +172,14 @@ class metrics:
         
     if return_output:
         return output
-
+    
+    
+    
+    
+    
+    
+    
+    
     def empChurn(probability_scores, true_class_labels, alpha=6, beta=14, clv=200, d=10, f=1, print_output=True, return_output=True, rounding=None):
   
   # This software comes with absolutely no warranty. Use at your own risk.
