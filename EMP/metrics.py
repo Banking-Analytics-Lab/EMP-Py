@@ -1,6 +1,6 @@
 import numpy as np 
 import pandas as pd
-import sklearn as sk
+from sklearn.metrics import roc_curve
 import collections
 from scipy.spatial import ConvexHull
 from scipy.special import betainc
@@ -90,7 +90,7 @@ def __empRocInfo(probability_scores, true_class_labels):
     n_1 = total_number_of_observations - n_0
     pi_1 = n_1 / total_number_of_observations
     pi_0 = n_0 / total_number_of_observations
-    fpr, tpr, thresholds = sk.metrics.roc_curve(arguments_list[1], arguments_list[0])
+    fpr, tpr, thresholds = roc_curve(arguments_list[1], arguments_list[0])
     roc_output = np.c_[fpr, tpr]
     hull = ConvexHull(roc_output)
     vertices = []

@@ -7,7 +7,7 @@ Functions for estimating EMP (Expected Maximum Profit Measure) in Credit Risk Sc
 ## Installation
 
 ```python
-pip install EMP
+pip install EMP-PY
 ```
 
 ## Usage
