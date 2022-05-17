@@ -32,4 +32,4 @@ empCreditScoring(scores, classes, return_output=False)
 empCreditScoring(scores, classes, rounding=k)
 ```
 
-The functions have been co-authored by Thomas Verbraken, Seppe van den Brucke and Cristián Bravo. Python translation by (Emiliano Peñaloza)[https://emilianopp.com/#/home] and Alexander Hemming.
+The functions have been co-authored by Thomas Verbraken, Seppe van den Brucke and Cristián Bravo. Python translation by [Emiliano Peñaloza](https://emilianopp.com/#/home) and Alexander Hemming.
