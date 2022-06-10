@@ -1,8 +1,8 @@
 # EMP-Py
 
-EMP Python Package repository, currently at version 2.0.1.
+EMP Python Package repository, currently at version 2.0.4.
 
-Functions for estimating EMP (Expected Maximum Profit Measure) in Credit Risk Scoring and Customer Churn Prediction, according to Verbraken et al (2013, 2014).
+Functions for estimating EMP (Expected Maximum Profit Measure) in [Credit Risk Scoring](https://www.sciencedirect.com/science/article/pii/S0377221714003105) and [Customer Churn Prediction](https://ieeexplore.ieee.org/document/6165289), according to Verbraken et al (2013, 2014).
 
 ## Installation
 
@@ -32,4 +32,4 @@ empCreditScoring(scores, classes, return_output=False)
 empCreditScoring(scores, classes, rounding=k)
 ```
 
-The functions have been co-authored by Thomas Verbraken, Seppe van den Brucke and Cristián Bravo. Python translation by [Emiliano Peñaloza](https://emilianopp.com/#/home) and Alexander Hemming.
+The functions have been co-authored by Thomas Verbraken, Seppe van den Brucke and [Cristián Bravo](https://github.com/CBravoR). Python translation by [Emiliano Peñaloza](https://emilianopp.com/#/home) and Alexander Hemming.
