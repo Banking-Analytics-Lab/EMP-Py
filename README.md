@@ -1,6 +1,7 @@
 # EMP-Py
 
-EMP Python Package repository, currently at version 2.0.4.
+EMP Python Package repository, currently at [version 2.0.4](https://pypi.org/project/EMP-PY/).
+
 
 Functions for estimating EMP (Expected Maximum Profit Measure) in [Credit Risk Scoring](https://www.sciencedirect.com/science/article/pii/S0377221714003105) and [Customer Churn Prediction](https://ieeexplore.ieee.org/document/6165289), according to Verbraken et al (2013, 2014).
 
