@@ -164,6 +164,17 @@ def empCreditScoring(probability_scores, true_class_labels, p_0=0.55, p_1=0.1, R
     #     EMPC: The Expected Maximum Profit of the ROC curve at EMP_fraction cutoff.
     #     EMPC_fraction: The percentage of cases that should be excluded, that is, 
     #     the percentual cutoff at EMP profit.
+    #
+    # Ties at lambda = 1:
+    #   The point mass p_1 (total loss, lambda = 1) gets the cutoff that maximizes the profit at
+    #   lambda = 1. Along a segment of the ROC convex hull, lambda = ROI * (non-defaulters excluded) /
+    #   (defaulters excluded). If this is exactly 1, for example 2 non-defaulters per defaulter with
+    #   ROI = 0.5, the cutoffs at both ends of the segment give the same profit at lambda = 1, so the
+    #   cutoff for p_1 is not unique. The choice then follows the lambda computed in floating point.
+    #   If it is below 1 (for example 0.9999999999999998), p_1 gets the cutoff that excludes more
+    #   cases. If it is 1 or above, p_1 gets the cutoff that excludes fewer cases. The two choices
+    #   give values of EMPC_fraction that differ by p_1 times the difference between the two cutoffs.
+    #   EMPC is the same for both, because both cutoffs give the same profit.
         
     ### Initializing constants and variables for rest of function ###
 
@@ -175,6 +186,8 @@ def empCreditScoring(probability_scores, true_class_labels, p_0=0.55, p_1=0.1, R
         # If the last hull segment is horizontal, its lambda is infinite. The next line drops it.
         with np.errstate(divide = 'ignore', invalid = 'ignore'):
             lambda_values = np.append(0, (((roc[3]*ROI) / roc[2])*(np.diff(roc[5]) / np.diff(roc[4]))))
+        # Lambdas of 1 or above are dropped, so the p_1 mass gets the hull vertex that is optimal
+        # just below lambda = 1 (see "Ties at lambda = 1" above).
         lambda_values = np.append(lambda_values[lambda_values < 1], 1)
         lambdaii = lambda_values[range(0, len(lambda_values) - 1)]
         lambdaie = lambda_values[range(1, len(lambda_values))]
