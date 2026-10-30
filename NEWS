@@ -32,3 +32,6 @@ Changes
   it by default.
 * New tests in tests/. To run them, install pytest and run "python -m pytest"
   from the repository root.
+* A GitHub release now publishes the package to PyPI with Trusted Publishing,
+  through .github/workflows/publish.yml. The comments at the top of that file
+  give the one-time setup on PyPI and GitHub.
