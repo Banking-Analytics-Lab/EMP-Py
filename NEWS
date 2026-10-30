@@ -1,1 +1,34 @@
+EMP-PY 2.0.5 (unreleased)
 
+Results on valid input do not change. On 6,018 test cases, version 2.0.5 gives
+the same EMPC, EMP, MP and fraction values as version 2.0.4, bit for bit.
+
+Bug fixes
+
+* The ROC convex hull no longer uses scipy.spatial.ConvexHull. That function
+  raised QhullError when the ROC curve had fewer than three points or when all
+  its points lay on one line, for example with constant scores or a diagonal
+  ROC curve with ties. A monotone-chain hull replaces it. The hull is computed
+  on the integer counts of false and true positives, so the test for collinear
+  points is exact.
+* Invalid input raises ValueError. Version 2.0.4 called sys.exit, which ended
+  the Python process.
+* A sample with only one class raises a ValueError that names the problem.
+  Version 2.0.4 failed with "ValueError: Points cannot contain NaN".
+* Ordinary data no longer gives "RuntimeWarning: divide by zero encountered in
+  divide". The warning came from the last hull segment when it is horizontal.
+  The computation drops that segment.
+
+Changes
+
+* Scores do not have to lie in [0,1]. EMP depends only on the order of the
+  scores, so logits and scorecard points work. Scores that are NaN or infinite
+  raise ValueError.
+* Inputs that are not one-dimensional raise ValueError. A single-column pandas
+  DataFrame and a row or column vector work. Version 2.0.4 flattened nested
+  lists of any shape.
+* The input checks use numpy operations instead of Python loops.
+* The README now says that the functions return the output and do not print
+  it by default.
+* New tests in tests/. To run them, install pytest and run "python -m pytest"
+  from the repository root.

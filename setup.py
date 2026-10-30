@@ -5,7 +5,7 @@ with open("README.md", "r") as fh:
 
     setuptools.setup(
         name="EMP-PY",
-        version="2.0.4",
+        version="2.0.5",
         author="Cristián Bravo",
         author_email="cbravoro@uwo.ca",
         description="Functions for estimating EMP (Expected Maximum Profit Measure) in Credit Risk Scoring and Customer Churn Prediction, according to Verbraken et al (2013, 2014).",
