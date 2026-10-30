@@ -1,0 +1,75 @@
+# Publishes EMP-PY to PyPI with Trusted Publishing, so no API token is stored anywhere.
+#
+# One-time setup:
+# 1. On PyPI, open the EMP-PY project, then Manage > Publishing. Add a GitHub publisher with
+#    owner "Banking-Analytics-Lab", repository "EMP-Py", workflow "publish.yml" and
+#    environment "pypi".
+# 2. On GitHub, open Settings > Environments and create an environment named "pypi".
+#    Add at least one maintainer under "Required reviewers".
+#
+# To release:
+# 1. Set the new version in setup.py, add it to NEWS and README.md, and merge to main.
+# 2. Create a GitHub release from main with the tag "v<version>", for example "v2.0.5".
+# 3. The workflow runs the tests, builds the package and waits for a reviewer to approve
+#    the "pypi" environment. After the approval, it uploads the package to PyPI.
+
+name: Publish to PyPI
+
+on:
+  release:
+    types: [published]
+
+permissions:
+  contents: read
+
+jobs:
+  test:
+    name: Run the tests
+    uses: ./.github/workflows/tests.yml
+
+  build:
+    name: Build the distribution
+    needs: test
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v7
+        with:
+          persist-credentials: false
+      - uses: actions/setup-python@v7
+        with:
+          python-version: "3.x"
+      - name: Install build
+        run: python -m pip install build
+      - name: Build a wheel and a source distribution
+        run: python -m build
+      - name: Make sure that the release tag matches the package version
+        run: |
+          expected="dist/emp_py-${GITHUB_REF_NAME#v}-py3-none-any.whl"
+          if [ ! -f "$expected" ]; then
+            echo "The tag $GITHUB_REF_NAME does not match the version in setup.py. Found:"
+            ls dist
+            exit 1
+          fi
+      - name: Store the distribution
+        uses: actions/upload-artifact@v7
+        with:
+          name: python-package-distributions
+          path: dist/
+
+  publish:
+    name: Publish to PyPI
+    needs: build
+    runs-on: ubuntu-latest
+    environment:
+      name: pypi
+      url: https://pypi.org/p/EMP-PY
+    permissions:
+      id-token: write  # mandatory for Trusted Publishing
+    steps:
+      - name: Download the distribution
+        uses: actions/download-artifact@v8
+        with:
+          name: python-package-distributions
+          path: dist/
+      - name: Publish to PyPI
+        uses: pypa/gh-action-pypi-publish@release/v1
