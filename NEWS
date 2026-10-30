@@ -1,4 +1,4 @@
-EMP-PY 2.0.5 (unreleased)
+EMP-PY 2.0.5 (2026-10-30)
 
 Results on valid input do not change. On 6,018 test cases, version 2.0.5 gives
 the same EMPC, EMP, MP and fraction values as version 2.0.4, bit for bit.
@@ -21,6 +21,13 @@ Bug fixes
 
 Changes
 
+* EMP-PY now needs Python 3.10 or later. Version 2.0.4 allowed Python 3.8.
+  On Python 3.8 and 3.9, pip keeps installing version 2.0.4.
+* setup.py gives the license as the SPDX expression GPL-3.0-or-later instead
+  of the deprecated license classifier. It no longer lists pandas twice or
+  requires numpy at build time.
+* The comments of empCreditScoring explain EMPC_fraction when two cutoffs tie
+  at lambda = 1.
 * Scores do not have to lie in [0,1]. EMP depends only on the order of the
   scores, so logits and scorecard points work. Scores that are NaN or infinite
   raise ValueError.
