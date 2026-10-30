@@ -35,3 +35,7 @@ Changes
 * A GitHub release now publishes the package to PyPI with Trusted Publishing,
   through .github/workflows/publish.yml. The comments at the top of that file
   give the one-time setup on PyPI and GitHub.
+* The tests run on each push to main and on each pull request, through
+  .github/workflows/tests.yml. They run on Python 3.10 to 3.15 on Linux, on
+  Windows and macOS, and with numpy 1.x. The publish workflow runs the same
+  tests before it builds a release.
