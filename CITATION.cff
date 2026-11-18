@@ -1,0 +1,53 @@
+cff-version: 1.2.0
+message: "If you use this package, please cite the paper below. If you use EMPC, the EMP for credit scoring, please cite instead the EJOR paper listed under references (Verbraken, Bravo, Weber and Baesens, 2014)."
+title: "EMP-Py"
+license: GPL-3.0-or-later
+authors:
+  - family-names: "Bravo"
+    given-names: "Cristián"
+  - family-names: "vanden Broucke"
+    given-names: "Seppe"
+  - family-names: "Verbraken"
+    given-names: "Thomas"
+  - family-names: "Peñaloza"
+    given-names: "Emiliano"
+  - family-names: "Hemming"
+    given-names: "Alexander"
+repository-code: "https://github.com/Banking-Analytics-Lab/EMP-Py"
+url: "https://pypi.org/project/EMP-PY/"
+preferred-citation:
+  type: article
+  title: "A Novel Profit Maximizing Metric for Measuring Classification Performance of Customer Churn Prediction Models"
+  year: 2013
+  journal: "IEEE Transactions on Knowledge and Data Engineering"
+  volume: 25
+  issue: 5
+  start: 961
+  end: 973
+  doi: "10.1109/TKDE.2012.50"
+  authors:
+    - family-names: "Verbraken"
+      given-names: "Thomas"
+    - family-names: "Verbeke"
+      given-names: "Wouter"
+    - family-names: "Baesens"
+      given-names: "Bart"
+references:
+  - type: article
+    title: "Development and application of consumer credit scoring models using profit-based classification measures"
+    year: 2014
+    journal: "European Journal of Operational Research"
+    volume: 238
+    issue: 2
+    start: 505
+    end: 513
+    doi: "10.1016/j.ejor.2014.04.001"
+    authors:
+      - family-names: "Verbraken"
+        given-names: "Thomas"
+      - family-names: "Bravo"
+        given-names: "Cristián"
+      - family-names: "Weber"
+        given-names: "Richard"
+      - family-names: "Baesens"
+        given-names: "Bart"
