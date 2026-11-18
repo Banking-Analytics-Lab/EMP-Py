@@ -26,7 +26,7 @@ citEntry(entry="article",
          number = "5",
          pages = "961-973",
          url = "http://ieeexplore.ieee.org/iel5/69/6486492/06165289.pdf?arnumber=6165289",
-         textVersion = paste("Verbraken, T., Wouter, V. and Baesens, B. (2013)",
+         textVersion = paste("Verbraken, T., Verbeke, W. and Baesens, B. (2013)",
            "A Novel Profit Maximizing Metric for Measuring Classification Performance of Customer Churn Prediction Models.",
                "Knowledge and Data Engineering, IEEE Transactions on.", "25 (5): 961-973",
                 "http://ieeexplore.ieee.org/iel5/69/6486492/06165289.pdf?arnumber=6165289")

@@ -37,4 +37,4 @@ The class labels use 1 for the event of interest: default in `empCreditScoring` 
 
 The functions raise a `ValueError` if the input is not valid. For example, this happens if the labels have more than two classes or only one class, or if a score is NaN or infinite.
 
-The functions have been co-authored by Thomas Verbraken, Seppe van den Brucke and [Cristián Bravo](https://github.com/CBravoR). Python translation by [Emiliano Peñaloza](https://emilianopp.com/#/home) and Alexander Hemming.
+The functions have been co-authored by Thomas Verbraken, Seppe vanden Broucke and [Cristián Bravo](https://github.com/CBravoR). Python translation by [Emiliano Peñaloza](https://emilianopp.com/#/home) and Alexander Hemming.

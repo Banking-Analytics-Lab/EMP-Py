@@ -228,7 +228,7 @@ def empChurn(probability_scores, true_class_labels, alpha=6, beta=14, clv=200, d
     # This software comes with absolutely no warranty. Use at your own risk.
     #
     # Adapted from:
-    # Verbraken, T., Wouter, V. and Baesens, B. (2013). A Novel Profit Maximizing 
+    # Verbraken, T., Verbeke, W. and Baesens, B. (2013). A Novel Profit Maximizing 
     # Metric for Measuring Classification Performance of Customer Churn Prediction
     # Models. Knowledge and Data Engineering, IEEE Transactions on. 25 (5): 
     # 961-973.
