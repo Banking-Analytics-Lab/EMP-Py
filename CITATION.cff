@@ -1,5 +1,5 @@
 cff-version: 1.2.0
-message: "If you use this package, please cite the paper below."
+message: "If you use this package, please cite the paper below. If you use EMPC, the EMP for credit scoring, please cite instead the EJOR paper listed under references (Verbraken, Bravo, Weber and Baesens, 2014)."
 title: "EMP-Py"
 license: GPL-3.0-or-later
 authors:
